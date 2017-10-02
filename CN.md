@@ -1,4 +1,7 @@
 # yohe
+[![npm](https://img.shields.io/npm/dm/yohe.svg?style=flat-square)](https://www.npmjs.com/package/yohe)
+[![npm](https://img.shields.io/npm/v/yohe.svg?style=flat-square)](https://github.com/laoqiren/yohe)
+
 一个静态博客生成器，采用[Node.js](https://nodejs.org)开发。
 
 [English doc](https://github.com/laoqiren/yohe/blob/master/README.md)

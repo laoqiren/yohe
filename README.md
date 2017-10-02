@@ -1,4 +1,7 @@
 # yohe
+[![npm](https://img.shields.io/npm/dm/yohe.svg?style=flat-square)](https://www.npmjs.com/package/yohe)
+[![npm](https://img.shields.io/npm/v/yohe.svg?style=flat-square)](https://github.com/laoqiren/yohe)
+
 just a static blog generator, powered by [Node.js](https://nodejs.org)
 
 [中文文档](https://github.com/laoqiren/yohe/blob/master/CN.md)
