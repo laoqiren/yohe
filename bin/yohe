@@ -1,0 +1,32 @@
+#! /usr/bin/env node
+
+const program = require('commander');
+
+program
+    .version('0.0.1')
+    .command('init [dir]')
+    .description('init a blog')
+    .action(require('../lib/init'))
+
+program
+    .command('new [name]')
+    .description('create a new post')
+    .action(require('../lib/new.js'))
+
+program
+    .command('server [dir]')
+    .description('preview the blog by running a local server')
+    .action(require('../lib/preview.js'))
+
+program
+    .command('build [dir]')
+    .description('build the blog')
+    .option('-o, --output <dir>','render blog to html')
+    .action(require('../lib/build'))
+
+program
+    .command('clean')
+    .description('clean the blog dir')
+    .action(require('../lib/clean.js'))
+
+program.parse(process.argv);
