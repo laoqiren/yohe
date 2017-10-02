@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{config.title|escape}}</title>
+  <link rel="stylesheet"
+  href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{config.theme.highlightTheme}}.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+</head>
+<body>
+  <h1>{{post.title|escape}}</h1>
+  <p>日期: {{post.date|escape}}</p>
+  <hr>
+  <div class="post-content">{{post.content}}</div>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
