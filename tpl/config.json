@@ -1,0 +1,13 @@
+{
+    "basic": {
+        "title": "My Blog",
+        "author": "laoqiren"
+    },
+    "theme": {
+        "highlightTheme": "railscasts",
+        "per_page": 6
+    },
+    "server": {
+        "port": 3000
+    }
+}
