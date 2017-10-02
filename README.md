@@ -1,5 +1,5 @@
 # yohe
-just a static blog generator, powered by [Node.js](nodejs.org)
+just a static blog generator, powered by [Node.js](https://nodejs.org)
 
 [中文文档](https://github.com/laoqiren/yohe/blob/master/CN.md)
 

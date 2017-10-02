@@ -1,5 +1,5 @@
 # yohe
-一个静态博客生成器，采用[Node.js](nodejs.org)开发。
+一个静态博客生成器，采用[Node.js](https://nodejs.org)开发。
 
 [English doc](https://github.com/laoqiren/yohe/blob/master/README.md)
 
