@@ -1,0 +1,40 @@
+
+article {
+    padding: 40px 0 40px 0;
+    border-bottom: solid 1px #ddd;
+}
+
+.article-header {
+    margin-bottom: 2%;
+}
+.article-header h1 a{
+    color: #333332
+}
+.article-header h1 a:hover{
+    color: #57ad68
+}
+
+.article-footer {
+    font-size: 14px;
+    color: #b3b3b1;
+    text-align: right;
+}
+
+
+.list-header {
+    margin-bottom: 4em;
+    padding: 10px 20px;
+    background-color: #F5F5F5;
+    border: solid 1px #eee;
+    border-radius: 10px;
+}
+
+.list-title {
+    font-size: 3.5em;
+    color: #333332;
+    margin: 20px 0;
+    letter-spacing: -1px;
+    line-height: 1;
+    font-weight: 700;
+    word-wrap: break-word;
+}

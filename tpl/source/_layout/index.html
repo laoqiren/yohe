@@ -9,32 +9,7 @@
 {% endblock %}
 
 {% block nav %}
-    <nav class="site-navigation main-navigation">
-        <div class="menu">
-            <ul>
-                <li>
-                    <a href="{{config.basic.root}}/tags">标签</a>
-                </li>
-                <li>    
-                    <a href="{{config.basic.root}}/categories">分类</a>
-                </li>
-                <li>
-                    <a href="{{config.basic.root}}/about">关于</a> 
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <nav class="categories">
-        <h1 class="cate-title">categories</h1>
-        <ul>
-            {% for cate in categories %}
-                <li>
-                    <a href={{cate.url}}>{{cate.name}}</a>
-                </li>
-            {% endfor %}
-        </ul>
-    </nav>
+   {% parent %}
 {% endblock %}
 
 {% block content %}
