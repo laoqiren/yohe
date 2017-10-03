@@ -1,6 +1,6 @@
 {
   "name": "yohe",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "static blog generator system",
   "main": "index.js",
   "scripts": {
