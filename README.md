@@ -15,6 +15,7 @@
 * 可定制化信息和主题
 * 支持标签，分类，archives,分页等
 * 评论，统计(开发中)等功能
+* 首页可过滤分类文章
 
 ## 安装
 ```
@@ -61,7 +62,8 @@ $ yohe server
     },
     "theme": {
         "highlightTheme": "railscasts", // 代码高亮主题，所有可用主题列表参照"https://github.com/isagalaev/highlight.js/tree/master/src/styles"
-        "per_page": 6 //每页展示的文章数
+        "per_page": 6,//每页展示的文章数
+        "filter": ["life","随笔"]  // 首页过滤分类文章，比如生活随笔文章不显示在首页列表
     },
     "server": {
         "port": 3000 //本地预览服务器端口
@@ -101,6 +103,7 @@ categories: Nodejs
 
 ## 其他技巧
 * 关于页面为`source/_about/about.md`
+* 指定首页过滤分类文章，可以很方便地实现`blog in blog`
 
 ## TODOs
 
