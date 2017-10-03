@@ -37,6 +37,9 @@
                             <li>
                                 <a href="{{config.basic.root}}/about">关于</a> 
                             </li>
+                            <li>
+                                <a href="{{config.basic.root}}/categories/life">生活随笔</a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -45,9 +48,11 @@
                     <h1 class="cate-title">categories</h1>
                     <ul>
                         {% for cate in categories %}
-                            <li>
-                                <a href={{cate.url}}>{{cate.name}}</a>
-                            </li>
+                            {% if config.theme.filter.indexOf(cate.name)===-1 %}
+                                <li>
+                                    <a href={{cate.url}}>{{cate.name}}</a>
+                                </li>
+                            {% endif %}
                         {% endfor %}
                     </ul>
                 </nav>
