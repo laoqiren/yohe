@@ -1,7 +1,8 @@
 {
     "basic": {
         "title": "My Blog",
-        "author": "laoqiren"
+        "author": "laoqiren",
+        "root": ""
     },
     "theme": {
         "highlightTheme": "railscasts",

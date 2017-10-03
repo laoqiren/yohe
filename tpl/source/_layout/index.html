@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block head %}
-     <link rel="stylesheet" href="/assets/css/index.css">
+     <link rel="stylesheet" href="{{config.basic.root}}/assets/css/index.css">
 {% endblock %}
 
 {% block nav %}
@@ -13,13 +13,13 @@
         <div class="menu">
             <ul>
                 <li>
-                    <a href="/tags">标签</a>
+                    <a href="{{config.basic.root}}/tags">标签</a>
                 </li>
                 <li>    
-                    <a href="/categories">分类</a>
+                    <a href="{{config.basic.root}}/categories">分类</a>
                 </li>
                 <li>
-                    <a href="/about">关于</a> 
+                    <a href="{{config.basic.root}}/about">关于</a> 
                 </li>
             </ul>
         </div>
@@ -58,13 +58,13 @@
     <nav class="nav-below">
         {% if pageNumber !== 0 %}
             <div class="nav-previous">
-                <a href="/page/{{pageNumber-1}}">上一页</a>
+                <a href="{{config.basic.root}}/page/{{pageNumber-1}}">上一页</a>
             </div>
         {% endif %}
     
         {% if (pageNumber+1) !== sumPages %}
             <div class="nav-next">
-                <a href="/page/{{pageNumber+1}}">下一页</a>
+                <a href="{{config.basic.root}}/page/{{pageNumber+1}}">下一页</a>
             </div>
         {% endif %}
     </nav>
