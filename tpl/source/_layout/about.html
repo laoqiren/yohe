@@ -14,4 +14,19 @@
 
 {% block content %}
     {{content.content}}
+    <div id="gitcomment"></div>
+{% endblock %}
+
+{% block script %}
+    <script>
+        var gitment = new Gitment({
+          owner: "{{config.gitment.owner}}",
+          repo: "{{config.gitment.repo}}",
+          oauth: {
+            client_id: "{{config.gitment.oauth.client_id}}",
+            client_secret: "{{config.gitment.oauth.client_secret}}"
+          }
+        })
+        gitment.render('gitcomment')
+    </script>
 {% endblock %}

@@ -11,5 +11,13 @@
     },
     "server": {
         "port": 3000
+    },
+    "gitment": {
+        "owner": "",
+        "repo": "",
+        "oauth": {
+            "client_id": "",
+            "client_secret": ""
+        }
     }
 }

@@ -20,7 +20,7 @@
 {% endblock %}
 
 {% block content %}
-  <div class="post-content">
+  <div class="post">
     <div class="post-header">
       <h2 class="post-cate">in {{post.categories}}</h2>
       <h1>{{post.title}}</h1>
@@ -28,10 +28,22 @@
     <div class="post-content">
         {{post.content}}
     </div>
+    <div id="gitcomment"></div>
   </div>
 {% endblock %}
 
 
 {% block script %}
     <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+        var gitment = new Gitment({
+          owner: "{{config.gitment.owner}}",
+          repo: "{{config.gitment.repo}}",
+          oauth: {
+            client_id: "{{config.gitment.oauth.client_id}}",
+            client_secret: "{{config.gitment.oauth.client_secret}}"
+          }
+        })
+        gitment.render('gitcomment')
+    </script>
 {% endblock %}
