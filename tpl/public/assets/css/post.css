@@ -1,0 +1,31 @@
+
+.site-published-separator {
+    border-top: 1px solid #dededc;
+    padding-top: 20px;
+    width: 40px;
+    float: right;
+}
+.site-published {
+    font-weight: bold;
+    line-height: 1.4;
+    color: #333332;
+    margin: 10px 0 0 0;
+    clear: both;
+    font-size: 14px;
+}
+.site-publish-date {
+    margin: 5px 0 0 0;
+    color: #929292;
+    font-height: 2;
+    font-size: 12px;
+}
+
+.post-header {
+    margin-bottom: 2%;
+}
+.post-cate {
+    color: #b3b3b1;
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}

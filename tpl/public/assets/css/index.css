@@ -1,0 +1,56 @@
+
+.site-navigation {
+    margin-top: 20px;
+    clear: both;
+    width: 100%;
+}
+
+.site-navigation ul {
+    list-style: none;
+}
+.site-navigation li {
+    line-height: .80;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+}
+.categories {
+    word-wrap: break-word;
+    margin: 1em 0 4em;
+
+}
+.categories .cate-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.categories ul {
+    list-style: none;
+}
+.categories li {
+    line-height: .80;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+article {
+    padding: 40px 0 40px 0;
+    border-bottom: solid 1px #ddd;
+}
+
+.article-header {
+    margin-bottom: 2%;
+}
+.article-header h1 a{
+    color: #333332
+}
+.article-header h1 a:hover{
+    color: #57ad68
+}
+
+.article-footer {
+    font-size: 14px;
+    color: #b3b3b1;
+    text-align: right;
+}
+

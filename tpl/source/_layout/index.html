@@ -1,35 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+{% extends "./layout.html" %}
 
-    <a href="/tags">标签</a>
-    <a href="/categories">分类</a>
-    <a href="/about">关于</a>
-    文章列表:
-    <ul>
-        {% for post in posts %}
-            <li>
-                <span>时间：{{post.timeStamp}}</span>
-                <a href={{post.url}}>{{post.title}}</a>
-            </li>
-        {% endfor %}
-    </ul>
+{% block title %}
+    {{config.basic.title}}
+{% endblock %}
+
+{% block head %}
+     <link rel="stylesheet" href="/assets/css/index.css">
+{% endblock %}
+
+{% block nav %}
+    <nav class="site-navigation main-navigation">
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="/tags">标签</a>
+                </li>
+                <li>    
+                    <a href="/categories">分类</a>
+                </li>
+                <li>
+                    <a href="/about">关于</a> 
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="categories">
+        <h1 class="cate-title">categories</h1>
+        <ul>
+            {% for cate in categories %}
+                <li>
+                    <a href={{cate.url}}>{{cate.name}}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+{% endblock %}
+
+{% block content %}
+    {% for post in posts %}
+        <article>
+            <header class="article-header">
+                <h1><a href={{post.url}}>{{post.title}}</a></h1>
+            </header>
+            <p>
+                {{post.headContent}}
+            </p>
+            <p>
+                <a href={{post.url}}>阅读更多</a>
+            </p>
+            <footer class="article-footer">
+                in {{post.categories}} | {{post.date}} | 0评论
+            </footer>
+        </article>
+    {% endfor %}
+
+    <nav class="nav-below">
+        {% if pageNumber !== 0 %}
+            <div class="nav-previous">
+                <a href="/page/{{pageNumber-1}}">上一页</a>
+            </div>
+        {% endif %}
+    
+        {% if (pageNumber+1) !== sumPages %}
+            <div class="nav-next">
+                <a href="/page/{{pageNumber+1}}">下一页</a>
+            </div>
+        {% endif %}
+    </nav>
     第<span>{{pageNumber+1}}页</span>
     共有<span>{{sumPages}}页</span>
-
-    {% if pageNumber !== 0 %}
-        <a href="/page/{{pageNumber-1}}">上一页</a>
-    {% endif %}
-
-    {% if (pageNumber+1) !== sumPages %}
-        <a href="/page/{{pageNumber+1}}">下一页</a>
-    {% endif %}
-
-</body>
-</html>
+{% endblock %}

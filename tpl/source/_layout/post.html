@@ -1,17 +1,37 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>{{config.title|escape}}</title>
+{% extends "./layout.html" %}
+
+{% block title %}
+    {{config.basic.title}}
+{% endblock %}
+
+{% block head %}
   <link rel="stylesheet"
   href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{config.theme.highlightTheme}}.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-</head>
-<body>
-  <h1>{{post.title|escape}}</h1>
-  <p>日期: {{post.date|escape}}</p>
-  <hr>
-  <div class="post-content">{{post.content}}</div>
-  <script>hljs.initHighlightingOnLoad();</script>
-</body>
-</html>
+  <link rel="stylesheet" href="/assets/css/post.css"/>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+{% endblock %}
+
+{% block nav %}
+  <div class="post-info">
+    <div class="site-published-separator"></div>
+    <h2 class="site-published">Published</h2>
+    <h2 class="site-publish-date">{{post.date}}</h2>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="post-content">
+    <div class="post-header">
+      <h2 class="post-cate">in {{post.categories}}</h2>
+      <h1>{{post.title}}</h1>
+    </div>
+    <div class="post-content">
+        {{post.content}}
+    </div>
+  </div>
+{% endblock %}
+
+
+{% block script %}
+    <script>hljs.initHighlightingOnLoad();</script>
+{% endblock %}
