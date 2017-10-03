@@ -4,6 +4,8 @@
 
 just a static blog generator, powered by [Node.js](https://nodejs.org)
 
+online demo: [http://luoxia.me/yohe_site/](http://luoxia.me/yohe_site/)
+
 [中文文档](https://github.com/laoqiren/yohe/blob/master/CN.md)
 
 ## Features

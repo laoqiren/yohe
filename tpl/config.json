@@ -2,6 +2,7 @@
     "basic": {
         "title": "My Blog",
         "author": "laoqiren",
+        "description": "爱技术，爱生活",
         "root": ""
     },
     "theme": {

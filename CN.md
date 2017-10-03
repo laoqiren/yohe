@@ -4,6 +4,8 @@
 
 一个静态博客生成器，采用[Node.js](https://nodejs.org)开发。
 
+线上demo: [http://luoxia.me/yohe_site/](http://luoxia.me/yohe_site/)
+
 [English doc](https://github.com/laoqiren/yohe/blob/master/README.md)
 
 ## 功能

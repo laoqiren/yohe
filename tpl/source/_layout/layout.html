@@ -19,7 +19,7 @@
                     <img src="https://avatars2.githubusercontent.com/u/16136702?v=4&s=120" width="100" height="100"/>
                 </a>
                 <h1 class="site-title">{{config.basic.title}}</h1>
-                <h2 class="site-description">爱技术，爱生活</h2>
+                <h2 class="site-description">{{config.basic.description}}</h2>
             </div>
 
             {% block nav %}
@@ -31,6 +31,7 @@
         {% endblock %}
        
         <div id="footer">
+            © 2017 <a href="#">{{config.basic.author}}</a>
             主题提供: <a href="https://github.com/laoqiren/yohe">Yohe</a>
             Powered By <a href="https://github.com/laoqiren/yohe">Yohe</a>
             图片存储: <a href="http://www.qiniu.com/">qiniu</a>
