@@ -110,6 +110,7 @@ $ yohe page <pageName>
     }
 }
 ```
+更丰富的配置正在开发中。
 
 ## 文章格式规范
 参照下面的例子:
@@ -124,8 +125,6 @@ categories: Nodejs
 ---
 ```
 其中`layout`默认为`post`,`comment`默认为`true`
-
-更丰富的配置正在开发中
 
 ## 如何发布
 `Yohe`最终渲染结果在`public`目录，可采用多种方式起一个静态文件服务器，将`public`目录发布。
