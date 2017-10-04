@@ -17,6 +17,7 @@ online demo: [http://luoxia.me/yohe_site/](http://luoxia.me/yohe_site/)
 * support tags,categories,pages,archives,etc.
 * support github comment(powered by gitment).
 * support filter specially categories to not be shown on the posts list
+
 ## Installation
 ```
 $ npm install yohe -g
