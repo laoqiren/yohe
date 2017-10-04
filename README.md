@@ -8,6 +8,8 @@
 
 [English doc](https://github.com/laoqiren/yohe/blob/master/en.md)
 
+**测试**
+
 ## 功能
 
 * 简单易用，快速
@@ -22,7 +24,6 @@
 ```
 $ npm install yohe -g
 ```
-**测试**
 
 ## 快速开始
 
