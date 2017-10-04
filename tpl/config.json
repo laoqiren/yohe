@@ -8,7 +8,21 @@
     "theme": {
         "highlightTheme": "railscasts",
         "per_page": 6,
-        "filter": ["life","随笔"]
+        "filter": ["life","随笔"],
+        "navPages": [
+            {
+                "title": "标签",
+                "url": "/tags"
+            },
+            {
+                "title": "关于",
+                "url": "/about"
+            },
+            {
+                "title": "生活随笔",
+                "url": "/categories/life/"
+            }
+        ]
     },
     "server": {
         "port": 3000

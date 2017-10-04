@@ -9,7 +9,7 @@ program
     .action(require('../lib/init'))
 
 program
-    .command('new [name]')
+    .command('new <name>')
     .description('create a new post')
     .action(require('../lib/new.js'))
 
@@ -28,5 +28,10 @@ program
     .command('clean')
     .description('clean the blog dir')
     .action(require('../lib/clean.js'))
+
+program
+    .command('page <name>')
+    .description('create a new page')
+    .action(require('../lib/page.js'))
 
 program.parse(process.argv);

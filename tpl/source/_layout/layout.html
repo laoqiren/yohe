@@ -28,18 +28,11 @@
                 <nav class="site-navigation main-navigation">
                     <div class="menu">
                         <ul>
-                            <li>
-                                <a href="{{config.basic.root}}/tags">标签</a>
-                            </li>
-                            <li>    
-                                <a href="{{config.basic.root}}/categories">作品</a>
-                            </li>
-                            <li>
-                                <a href="{{config.basic.root}}/about">关于</a> 
-                            </li>
-                            <li>
-                                <a href="{{config.basic.root}}/categories/life">生活随笔</a>
-                            </li>
+                            {% for page in config.theme.navPages %}
+                                <li>
+                                    <a href="{{config.basic.root}}{{page.url}}">{{page.title}}</a>
+                                </li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </nav>
