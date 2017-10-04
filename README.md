@@ -2,80 +2,79 @@
 [![npm](https://img.shields.io/npm/dm/yohe.svg?style=flat-square)](https://www.npmjs.com/package/yohe)
 [![npm](https://img.shields.io/npm/v/yohe.svg?style=flat-square)](https://github.com/laoqiren/yohe)
 
-一个静态博客生成器，采用[Node.js](https://nodejs.org)开发。Yohe = 哟呵，一个会让你发出”哟呵，不错哦“感叹的静态博客生成器。
+a static blog generator, powered by [Node.js](https://nodejs.org). Yohe means that you will say "Wow, so cute" after you tried it.
 
-线上demo: [http://luoxia.me/yohe_site/](http://luoxia.me/yohe_site/)
+online demo: [http://luoxia.me/yohe_site/](http://luoxia.me/yohe_site/)
 
-[English doc](https://github.com/laoqiren/yohe/blob/master/en.md)
+[中文文档](https://github.com/laoqiren/yohe/blob/master/CN.md)
 
-## 功能
+## Features
 
-* 简单易用，快速
-* 本地预览效果
-* 可定制化信息和主题
-* 新建自定义页面，可定制化导航菜单
-* 支持标签，分类，archives,分页等基础设施
-* 支持通过Github评论(gitment支持)
-* 首页可过滤指定分类文章
+* simple and fast static blog generator.
+* local server to preview the blog.
+* Customizable information and theme.
+* create new custom pages, CuSTomizable navigation menu.
+* tags,categories,pages,archives,etc.
+* github comment(powered by gitment).
+* filter specially categories to not be shown on the posts list
 
-## 安装
+## Installation
 ```
 $ npm install yohe -g
 ```
 
-## 快速开始
+## Quick Start
 
-**获取帮助**
+**Get help**
 ```
 $ yohe --help
 ```
 
-**初始化博客**
+**Setup your blog**
 ```
 $ yohe init myblog
 $ cd myblog
 ```
-该命令会初始化博客目录，包括初始化主题，文章，自定义页面等目录，以及加载默认配置文件
+the command will init the blog dir, include initial theme,posts,custom pages dir,and initial config fle.
 
-**创建新文章**
+**Create a new post**
 ```
 $ yohe new <postName>
 ```
-该命令在`source/_posts/`下新建`<postName>.md`文件，在这里写作
+the command will create `<postName>.md` file in `source/_posts`,edit it to start writting.
 
-**渲染博客文件**
+**Generate static files**
 ```
 $ yohe build
 ```
-该命令会渲染博客到`public`目录
+the command will generate your blog to dir `public`
 
-**本地预览**
+**Preview the blog**
 ```
 $ yohe server
 ```
-该命令会在本地起一个静态文件服务器，端口，子路径等信息可通过`config.json`配置
+the command will start a local static server to serve the `public` files. The port and subdir information can be edited at `config.json`.
 
-**新增自定义页面**
+**new custom pages**
 ```
 $ yohe page <pageName>
 ```
-该命令会在`source/_extra`下生成`<pageName>.md`文件,默认布局为`about`页面布局
+the command will create `<pageName>.md` file in `source/_extra` dir, the initial layout of the new page is `about`.
 
-## 配置文件
-运行`yohe init`后会生成`config.json`,配置说明：
+## config.json
 ```json
 {
     "basic": {
-        "title": "My Blog", // 博客标题
-        "author": "laoqiren", // 博客作者
-        "description": "爱技术，爱生活", // 个性签名
-        "root": "" // 博客根目录，当博客网站位于子路径如"http://luoxia.me/yohe_site"时，配置为"/yohe_site"
+        "title": "My Blog", // the title of your blog
+        "author": "laoqiren", // the author of the blog
+        "description": "爱技术，爱生活",
+        "root": "" // the root of the site ，e.g. set root to be "/yohe_site" if your blog is at "http://luoxia.me/yohe_site"
     },
     "theme": {
-        "highlightTheme": "railscasts", // 代码高亮主题，所有可用主题列表参照"https://github.com/isagalaev/highlight.js/tree/master/src/styles"
-        "per_page": 6,//每页展示的文章数
-        "filter": ["life","随笔"],  // 首页过滤分类文章，比如生活随笔文章不显示在首页列表
-        "navPages": [     // 自定义导航菜单的页面标题和链接
+        "highlightTheme": "railscasts", // code highlight syle, all available styles refer to "https://github.com/isagalaev/highlight.js/tree/master/src/styles"
+        "per_page": 6,// number of posts per page
+        "filter": ["life","随笔"],  // filter some special categories to not be shown
+        "navPages": [     // custom pages
             {
                 "title": "标签",
                 "url": "/tags"
@@ -91,9 +90,9 @@ $ yohe page <pageName>
         ]
     },
     "server": {
-        "port": 3000 //本地预览服务器端口
+        "port": 3000 // the port of local static server
     },
-    "gitment": {   // gitment评论功能相关配置，gitment使用教程参照”https://github.com/imsun/gitment“
+    "gitment": {   // gitment config, refer to ”https://github.com/imsun/gitment“
         "owner": "",
         "repo": "",
         "oauth": {
@@ -103,38 +102,33 @@ $ yohe page <pageName>
     }
 }
 ```
-更丰富的配置正在开发中。
 
-## 文章格式规范
-参照下面的例子:
+## post pattern
+follow the example below:
 ```
 ---
-title: Cluster模块
+title: Cluster
 date: 2016-11-27
-tags: [负载均衡,集群,多进程]
+tags: [Cluster,process]
 layout: post
 comment: true
 categories: Nodejs
 ---
 ```
-其中`layout`默认为`post`,`comment`默认为`true`
+**tips:** initial `layout` is `post`, and initial `comment` is `true`.
 
-## 如何发布
-`Yohe`最终渲染结果在`public`目录，可采用多种方式起一个静态文件服务器，将`public`目录发布。
+## How to publish
+`Yohe` will generate your blog to dir `public`, you can use different ways to serve `public` dir.
 
-## 如何修改主题
-目前`Yohe`的主题功能与`Yohe`耦合，需要修改主题可以对`source/_layout`和`public/assets/`进行开发，重新`yohe build`即可。未来的版本将解耦主题功能。
+## How to develop themes
+at present, the theme is inital and is not independent but you can develop the theme by editing `source/_layout` and `public/assets`. In the coming future, the theme development will be independent.
 
-## 其他技巧
-* 关于页面为`source/_about/about.md`
-* 指定首页过滤分类文章，可以很方便地实现`blog in blog`
-* 文档名和分类名中的空格用`-`代替
-
+## Other tips
+* About page is `source/_about/about.md`
+* To implement `blog in blog`, filter some special categories
+* To avoid errors, replace space with `-` of post name and category name.
 ## TODOs
 
-
-* 主题完善
-* archives
-* 统计等功能
-* 更丰富的配置
-* 解耦主题功能
+* make themes development independent
+* archives,analysis,etc
+* complex config
