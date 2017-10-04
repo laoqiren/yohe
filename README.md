@@ -8,8 +8,6 @@
 
 [English doc](https://github.com/laoqiren/yohe/blob/master/en.md)
 
-**测试**
-
 ## 功能
 
 * 简单易用，快速
@@ -27,19 +25,19 @@ $ npm install yohe -g
 
 ## 快速开始
 
-**获取帮助**
+#### 获取帮助
 ```
 $ yohe --help
 ```
 
-**初始化博客**
+#### 初始化博客
 ```
 $ yohe init myblog
 $ cd myblog
 ```
 该命令会初始化博客目录，包括初始化主题，文章，自定义页面等目录，以及加载默认配置文件
 
-**创建新文章**
+#### 创建新文章
 ```
 $ yohe new <postName>
 ```
