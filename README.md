@@ -2,7 +2,7 @@
 [![npm](https://img.shields.io/npm/dm/yohe.svg?style=flat-square)](https://www.npmjs.com/package/yohe)
 [![npm](https://img.shields.io/npm/v/yohe.svg?style=flat-square)](https://github.com/laoqiren/yohe)
 
-一个静态博客生成器，采用[Node.js](https://nodejs.org)开发。
+一个静态博客生成器，采用[Node.js](https://nodejs.org)开发。Yohe = 哟呵，一个会让你发出”哟呵，不错哦“感叹的静态博客生成器。
 
 线上demo: [http://luoxia.me/yohe_site/](http://luoxia.me/yohe_site/)
 
