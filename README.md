@@ -26,11 +26,13 @@ $ npm install yohe -g
 ## 快速开始
 
 **获取帮助**
+
 ```
 $ yohe --help
 ```
 
 **初始化博客**
+
 ```
 $ yohe init myblog
 $ cd myblog
@@ -38,18 +40,21 @@ $ cd myblog
 该命令会初始化博客目录，包括初始化主题，文章，自定义页面等目录，以及加载默认配置文件
 
 **创建新文章**
+
 ```
 $ yohe new <postName>
 ```
 该命令在`source/_posts/`下新建`<postName>.md`文件，在这里写作
 
 **渲染博客文件**
+
 ```
 $ yohe build
 ```
 该命令会渲染博客到`public`目录
 
 **本地预览**
+
 ```
 $ yohe server
 ```
@@ -57,6 +62,7 @@ $ yohe server
 
 
 **新增自定义页面**
+
 ```
 $ yohe page <pageName>
 ```
