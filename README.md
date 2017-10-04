@@ -13,9 +13,10 @@
 * 简单易用，快速
 * 本地预览效果
 * 可定制化信息和主题
-* 支持标签，分类，archives,分页等
-* 评论，统计(开发中)等功能
-* 首页可过滤分类文章
+* 新建自定义页面，可定制化导航菜单
+* 支持标签，分类，archives,分页等基础设施
+* 支持通过Github评论(gitment支持)
+* 首页可过滤指定分类文章
 
 ## 安装
 ```
@@ -31,24 +32,35 @@ $ yohe --help
 
 **初始化博客**
 ```
-$ yohe init blog
-$ cd blog
+$ yohe init myblog
+$ cd myblog
 ```
+该命令会初始化博客目录，包括初始化主题，文章，自定义页面等目录，以及加载默认配置文件
 
 **创建新文章**
 ```
-$ yohe new cluster
+$ yohe new <postName>
 ```
+该命令在`source/_posts/`下新建`<postName>.md`文件，在这里写作
 
 **渲染博客文件**
 ```
 $ yohe build
 ```
+该命令会渲染博客到`public`目录
 
 **本地预览**
 ```
 $ yohe server
 ```
+该命令会在本地起一个静态文件服务器，端口，子路径等信息可通过`config.json`配置
+
+
+**新增自定义页面**
+```
+$ yohe page <pageName>
+```
+该命令会在`source/_extra`下生成`<pageName>.md`文件,默认布局为`about`页面布局
 
 ## 配置文件
 运行`yohe init`后会生成`config.json`,配置说明：
@@ -63,7 +75,21 @@ $ yohe server
     "theme": {
         "highlightTheme": "railscasts", // 代码高亮主题，所有可用主题列表参照"https://github.com/isagalaev/highlight.js/tree/master/src/styles"
         "per_page": 6,//每页展示的文章数
-        "filter": ["life","随笔"]  // 首页过滤分类文章，比如生活随笔文章不显示在首页列表
+        "filter": ["life","随笔"],  // 首页过滤分类文章，比如生活随笔文章不显示在首页列表
+        "navPages": [     // 自定义导航菜单的页面标题和链接
+            {
+                "title": "标签",
+                "url": "/tags"
+            },
+            {
+                "title": "关于",
+                "url": "/about"
+            },
+            {
+                "title": "生活随笔",
+                "url": "/categories/life/"
+            }
+        ]
     },
     "server": {
         "port": 3000 //本地预览服务器端口
@@ -109,7 +135,8 @@ categories: Nodejs
 ## TODOs
 
 
-* 主题开发
+* 主题完善
 * archives
-* 评论，统计等功能
+* 统计等功能
 * 更丰富的配置
+* 解耦主题功能
