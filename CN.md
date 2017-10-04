@@ -138,3 +138,7 @@ categories: Nodejs
 * 统计等功能
 * 更丰富的配置
 * 解耦主题功能
+
+## LICENSE
+
+MIT.

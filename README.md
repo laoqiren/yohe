@@ -132,3 +132,7 @@ at present, the theme is inital and is not independent but you can develop the t
 * make themes development independent
 * archives,analysis,etc
 * complex config
+
+## LICENSE
+
+MIT.
