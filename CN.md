@@ -89,7 +89,8 @@ $ yohe page <pageName>
                 "title": "生活随笔",
                 "url": "/categories/life/"
             }
-        ]
+        ],
+        "reward": "alipay.jpg"  // 打赏二维码图片名，如支付宝，微信支付等
     },
     "server": {
         "port": 3000 //本地预览服务器端口
