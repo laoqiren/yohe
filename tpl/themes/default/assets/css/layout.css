@@ -201,11 +201,19 @@ a:hover {
     }
 }
 
+@media only screen and (max-width: 1200px) {
+    .site-title {
+        font-size: 32px
+    }
+}
 
 @media only screen and (max-width: 500px) {
     #page {
         padding-left: 20px;
         padding-right: 20px;
         margin-top: 20px;
+    }
+    .site-title {
+        font-size: 24px;
     }
 }

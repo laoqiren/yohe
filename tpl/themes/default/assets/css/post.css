@@ -42,3 +42,10 @@
     letter-spacing: 1px;
     line-height: 1.4;
 }
+
+@media only screen and (max-width: 500px) {
+    .entry-title {
+        font-size: 1.9em;
+        word-wrap: break-word;
+    }
+}

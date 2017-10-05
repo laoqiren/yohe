@@ -46,3 +46,9 @@
         border-bottom: none;
     }
 }
+
+@media only screen and (max-width: 500px) {
+    .list-title {
+        font-size: 2.2em
+    }
+}

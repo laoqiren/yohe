@@ -37,3 +37,9 @@
         border-bottom: none;
     }
 }
+
+@media only screen and (max-width: 500px) {
+    .entry-title {
+        font-size: 1.9em;
+    }
+}
