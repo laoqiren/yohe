@@ -6,6 +6,7 @@
         "root": ""
     },
     "theme": {
+        "themeName": "default",
         "highlightTheme": "railscasts",
         "per_page": 6,
         "filter": ["life","随笔"],
