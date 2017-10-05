@@ -23,7 +23,8 @@
                 "title": "生活随笔",
                 "url": "/categories/life/"
             }
-        ]
+        ],
+        "reward": "alipay.jpg"
     },
     "server": {
         "port": 3000

@@ -43,6 +43,17 @@
     line-height: 1.4;
 }
 
+.support {
+    text-align: center;
+}
+#ali_qr {
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    margin: 0.8em 2em 0 2em;
+}
+
 @media only screen and (max-width: 500px) {
     .entry-title {
         font-size: 1.9em;
