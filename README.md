@@ -12,7 +12,7 @@ online demo: [http://luoxia.me/yohe_site/](http://luoxia.me/yohe_site/)
 
 * simple and fast static blog generator.
 * local server to preview the blog.
-* Customizable information and theme.
+* Customizable information and themes.
 * create new custom pages, CuSTomizable navigation menu.
 * tags,categories,pages,archives,etc.
 * github comment(powered by gitment).
@@ -71,6 +71,7 @@ the command will create `<pageName>.md` file in `source/_extra` dir, the initial
         "root": "" // the root of the site ，e.g. set root to be "/yohe_site" if your blog is at "http://luoxia.me/yohe_site"
     },
     "theme": {
+        "themeName": "default",  // name of the theme.
         "highlightTheme": "railscasts", // code highlight syle, all available styles refer to "https://github.com/isagalaev/highlight.js/tree/master/src/styles"
         "per_page": 6,// number of posts per page
         "filter": ["life","随笔"],  // filter some special categories to not be shown
@@ -121,7 +122,19 @@ categories: Nodejs
 `Yohe` will generate your blog to dir `public`, you can use different ways to serve `public` dir.
 
 ## How to develop themes
-at present, the theme is inital and is not independent but you can develop the theme by editing `source/_layout` and `public/assets`. In the coming future, the theme development will be independent.
+
+**layouts:**
+```
+├── about.html    // layout of about page(required)
+├── index.html    // layout of index page(required)
+├── list.html     // posts list page of specially categories&tags(required)
+├── post.html     // layout of post's detail page(Can rename)
+└── tags.html     // layout of tags cloud(required)
+└── ...           // custom layouts
+```
+
+**assets:**
+the static resources like `.js`,`.css` should be in dir `assets`
 
 ## Other tips
 * About page is `source/_about/about.md`
@@ -129,7 +142,7 @@ at present, the theme is inital and is not independent but you can develop the t
 * To avoid errors, replace space with `-` of post name and category name.
 ## TODOs
 
-* make themes development independent
+* beautify default theme
 * archives,analysis,etc
 * complex config
 

@@ -72,6 +72,7 @@ $ yohe page <pageName>
         "root": "" // 博客根目录，当博客网站位于子路径如"http://luoxia.me/yohe_site"时，配置为"/yohe_site"
     },
     "theme": {
+        "themeName": "default",  // 主题名字
         "highlightTheme": "railscasts", // 代码高亮主题，所有可用主题列表参照"https://github.com/isagalaev/highlight.js/tree/master/src/styles"
         "per_page": 6,//每页展示的文章数
         "filter": ["life","随笔"],  // 首页过滤分类文章，比如生活随笔文章不显示在首页列表
@@ -122,8 +123,21 @@ categories: Nodejs
 ## 如何发布
 `Yohe`最终渲染结果在`public`目录，可采用多种方式起一个静态文件服务器，将`public`目录发布。
 
-## 如何修改主题
-目前`Yohe`的主题功能与`Yohe`耦合，需要修改主题可以对`source/_layout`和`public/assets/`进行开发，重新`yohe build`即可。未来的版本将解耦主题功能。
+## 如何开发主题
+
+**layouts:**
+```
+├── about.html    // 关于页面布局（必须）
+├── index.html    // 首页布局（必须）
+├── list.html     // 特定分类和标签文章列表布局（必须）
+├── post.html     // 文章详情页布局（可更名）
+└── tags.html     // 标签云布局（必须）
+└── ...           // 自定义的布局
+```
+
+**assets:**
+静态资源文件放在`assets`目录下
+
 
 ## 其他技巧
 * 关于页面为`source/_about/about.md`
@@ -133,11 +147,10 @@ categories: Nodejs
 ## TODOs
 
 
-* 主题完善
+* 默认主题完善
 * archives
 * 统计等功能
 * 更丰富的配置
-* 解耦主题功能
 
 ## LICENSE
 
