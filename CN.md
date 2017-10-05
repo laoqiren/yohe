@@ -140,6 +140,7 @@ categories: Nodejs
 
 
 ## 其他技巧
+* 要设置更改logo,替换`assets/images/logo.png`为你自己的logo图片，但名称依旧为`logo.png`
 * 关于页面为`source/_about/about.md`
 * 指定首页过滤分类文章，可以很方便地实现`blog in blog`
 * 文档名和分类名中的空格用`-`代替

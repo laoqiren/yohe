@@ -137,6 +137,7 @@ categories: Nodejs
 the static resources like `.js`,`.css` should be in dir `assets`
 
 ## Other tips
+* To setup your own logo, replace `assets/images/logo.png` with your own(name should also be `logo.png`)
 * About page is `source/_about/about.md`
 * To implement `blog in blog`, filter some special categories
 * To avoid errors, replace space with `-` of post name and category name.
