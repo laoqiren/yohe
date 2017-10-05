@@ -22,20 +22,27 @@
         </div>
     </header>
 
-    {% for post in list %}
-        <article>
-            <header class="article-header">
-                <h1><a href={{post.url}}>{{post.title}}</a></h1>
-            </header>
-            <p>
-                {{post.headContent}}
-            </p>
-            <p>
-                <a href={{post.url}}>阅读更多</a>
-            </p>
-            <footer class="article-footer">
-                in {{post.categories}} | {{post.date}} | 0评论
-            </footer>
-        </article>
-    {% endfor %}
+    <main id="content" class="site-content">
+            {% for post in list %}
+                <article>
+                    <header class="article-header">
+                        <h1><a href={{post.url}}>{{post.title}}</a></h1>
+                    </header>
+                    <p>
+                        {{post.headContent}}
+                    </p>
+                    <p>
+                        <a href={{post.url}}>阅读更多</a>
+                    </p>
+                    <footer class="article-footer">
+                        in {{post.categories}} | {{post.date}} | 0评论
+                    </footer>
+                </article>
+            {% endfor %}
+    </main>
+    
+{% endblock %}
+
+{% block secondary %}
+    {% parent %}
 {% endblock %}

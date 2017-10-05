@@ -36,15 +36,18 @@ a:hover {
     text-decoration: underline
 }
 
-#container {
-    margin: 80px auto;
+
+.site {
+    background-color: #ffffff;
     padding: 0 40px;
-    max-width: 750px;
+    margin: 80px auto;
+    max-width: 700px;
+    margin-bottom: 0;
     margin-top: 100px;
     vertical-align: baseline;
 }
 
-#nav {
+.site-header {
     float: left;
     margin-bottom: 30px;
     width: 160px;
@@ -57,6 +60,7 @@ a:hover {
     font-size: 16px;
     line-height: 1.2;
 }
+
 .site-description {
     color: #929292;
     font-size: 13px;
@@ -65,10 +69,10 @@ a:hover {
     margin-top: 5px;
 }
 
-
 .site-navigation {
     margin-top: 20px;
-    clear: both;
+    float: left;
+    clear:both;
     width: 100%;
 }
 
@@ -81,28 +85,127 @@ a:hover {
     padding-bottom: 5px;
     position: relative;
 }
-.categories {
-    word-wrap: break-word;
-    margin: 1em 0 4em;
 
+#primary {
+    display: block
 }
-.categories .cate-title {
-    font-size: 16px;
+
+#content {
+    float: right;
+    max-width: 700px;
+    width: 100%;
+}
+
+.widget-area {
+    float: left;
+    width: 160px;
+    clear: left;
+    margin-left: -220px;
+    text-align: right;
+    font-size: 15px;
+    word-wrap: break-word;
+    display: block;
+}
+
+.widget_categories {
+    word-wrap: break-word;
+    margin: 0 0 4em;
+    display: block;
+}
+
+.widget-title {
+    font-size: 1.5em;
     margin-bottom: 10px;
 }
-.categories ul {
+
+.widget-area ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
-.categories li {
+
+.widget-area li {
     line-height: .80;
     padding-top: 5px;
     padding-bottom: 5px;
+    margin: 0;
+}
+.widget-area li a {
+    line-height: 1.2;
+    font-size: 1.3em;
 }
 
-#footer {
+.site-footer {
     color: #b3b3b1;
     text-align: center;
     font-size: 0.8em;
     margin-top: 100px;
     margin-bottom: 20px;
+    float: right;
+    max-width: 700px;
+    width: 100%;
+
+}
+
+
+
+@media only screen and (max-width: 1200px){
+    .site {
+        margin-top: 40px;
+    }
+    .site-header {
+        text-align: center;
+        margin-left: 0;
+        display: block;
+        width: 100%;
+        position: relative;
+        margin-bottom: 0;
+    }
+    .site-title {
+        font-size: 32px;
+        font-style: normal;
+        padding-top: 0;
+        padding-left: 0;
+        clear: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .site-description {
+        padding-left: 0;
+        padding-top: 10px;
+        margin-bottom: 0 0 20px 0;
+        clear: none;
+    }
+    .site-navigation {
+        border-bottom: 1px solid #eee;
+        margin-top: 0;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        clear: none;
+    }
+    .site-navigation ul {
+        margin-left: -10px;
+    }
+    .site-navigation li {
+        display: inline-block;
+        padding: 5px 10px;
+        width: auto;
+    }
+
+    .widget-area {
+        float: right;
+        width: 100%;
+        margin-left: 0;
+        text-align: inherit;
+        padding-top: 40px;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    #page {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 20px;
+    }
 }

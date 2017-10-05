@@ -1,3 +1,16 @@
+.site-content {
+    float: right;
+    max-width: 700px;
+    width: 100%;
+    display: block;
+}
+
+.site-content article {
+    padding: 40px 0 40px 0;
+    border-bottom: solid 1px #ddd;
+    display: block;
+}
+
 
 .site-published-separator {
     border-top: 1px solid #dededc;

@@ -1,5 +1,4 @@
-
-article {
+.site-content article {
     padding: 40px 0 40px 0;
     border-bottom: solid 1px #ddd;
 }
@@ -13,13 +12,6 @@ article {
 .article-header h1 a:hover{
     color: #57ad68
 }
-
-.article-footer {
-    font-size: 14px;
-    color: #b3b3b1;
-    text-align: right;
-}
-
 
 .list-header {
     margin-bottom: 4em;
@@ -37,4 +29,20 @@ article {
     line-height: 1;
     font-weight: 700;
     word-wrap: break-word;
+}
+
+.article-footer {
+    font-size: 14px;
+    font-weight: 100;
+    color: #b3b3b1;
+    text-align: right;
+    clear: both;
+    display: block;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .article-footer {
+        border-bottom: none;
+    }
 }

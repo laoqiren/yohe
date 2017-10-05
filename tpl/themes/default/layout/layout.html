@@ -14,16 +14,15 @@
 </head>
 <body>
 
-    <div id="container">
-        <div id="nav">
+    <div id="page" class="hfeed site">
+        <header id="masthead" class="site-header">
             <div class="site-header-info">
-                <a href="{{config.basic.root}}/">
+                <a href="{{config.basic.root}}/" class="site-logo" title="{{config.basic.author}}">
                     <img src="https://avatars2.githubusercontent.com/u/16136702?v=4&s=120" width="100" height="100"/>
                 </a>
                 <h1 class="site-title">{{config.basic.title}}</h1>
                 <h2 class="site-description">{{config.basic.description}}</h2>
             </div>
-
             {% block nav %}
                 <nav class="site-navigation main-navigation">
                     <div class="menu">
@@ -36,31 +35,43 @@
                         </ul>
                     </div>
                 </nav>
-            
-                <nav class="categories">
-                    <h1 class="cate-title">categories</h1>
-                    <ul>
-                        {% for cate in categories %}
-                            {% if config.theme.filter.indexOf(cate.name)===-1 %}
-                                <li>
-                                    <a href={{cate.url}}>{{cate.name}}</a>
-                                </li>
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
-                </nav>
             {% endblock %} 
+        </header>
+
+        <div id="main" class="site-main">
+            <div id="primary">
+                <main id="content" class="site-content">
+                    {% block content %}
+                    {% endblock %}
+                </main>
+            </div>
+
+            {% block secondary %}
+                <div id="secondary" class="widget-area">
+
+                    <aside class="widget widget_categories">
+                        <h1 class="widget-title">categories</h1>
+                        <ul>
+                            {% for cate in categories %}
+                                {% if config.theme.filter.indexOf(cate.name)===-1 %}
+                                    <li>
+                                        <a href={{cate.url}}>{{cate.name}}</a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </aside>
+                </div>
+            {% endblock %}
+            
         </div>
 
-        {% block content %}
-        {% endblock %}
-       
-        <div id="footer">
+        <footer id="colophon" class="site-footer">
             © 2017 <a href="#">{{config.basic.author}}</a>
             主题提供: <a href="https://github.com/laoqiren/yohe">Yohe</a>
             Powered By <a href="https://github.com/laoqiren/yohe">Yohe</a>
             图片存储: <a href="http://www.qiniu.com/">qiniu</a>
-        </div>
+        </footer>
     </div>
 
     {% block script %}

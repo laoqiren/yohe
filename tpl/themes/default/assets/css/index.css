@@ -1,12 +1,13 @@
 
-
-article {
+.site-content article {
     padding: 40px 0 40px 0;
     border-bottom: solid 1px #ddd;
 }
 
+
 .article-header {
     margin-bottom: 2%;
+    width: 90%;
 }
 .article-header h1 a{
     color: #333332
@@ -15,9 +16,24 @@ article {
     color: #57ad68
 }
 
-.article-footer {
-    font-size: 14px;
-    color: #b3b3b1;
-    text-align: right;
+
+.entry-content {
+    word-wrap: break-word;
+    margin: 0;
 }
 
+.article-footer {
+    font-size: 14px;
+    font-weight: 100;
+    color: #b3b3b1;
+    text-align: right;
+    clear: both;
+    display: block;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .article-footer {
+        border-bottom: none;
+    }
+}

@@ -13,36 +13,44 @@
 {% endblock %}
 
 {% block content %}
-    {% for post in posts %}
-        <article>
-            <header class="article-header">
-                <h1><a href={{post.url}}>{{post.title}}</a></h1>
-            </header>
-            <p>
-                {{post.headContent}}
-            </p>
-            <p>
-                <a href={{post.url}}>阅读更多</a>
-            </p>
-            <footer class="article-footer">
-                in {{post.categories}} | {{post.date}}
-            </footer>
-        </article>
-    {% endfor %}
+    <main id="content" class="site-content">
+        {% for post in posts %}
+            <article>
+                <header class="article-header">
+                    <h1><a href={{post.url}}>{{post.title}}</a></h1>
+                </header>
+                <div class="entry-content">
+                    <p>
+                        {{post.headContent}}
+                    </p>
+                    <p>
+                        <a href={{post.url}}>阅读更多</a>
+                    </p>
+                </div>
+                <footer class="article-footer">
+                    in {{post.categories}} | {{post.date}}
+                </footer>
+            </article>
+        {% endfor %}
+        <nav id="nav-below" class="site-navigation paging-navigation">
+            {% if pageNumber !== 0 %}
+                <div class="nav-previous">
+                    <a href="{{config.basic.root}}/page/{{pageNumber-1}}">上一页</a>
+                </div>
+            {% endif %}
+        
+            {% if (pageNumber+1) !== sumPages %}
+                <div class="nav-next">
+                    <a href="{{config.basic.root}}/page/{{pageNumber+1}}">下一页</a>
+                </div>
+            {% endif %}
+            第<span>{{pageNumber+1}}页</span>
+            共有<span>{{sumPages}}页</span>
+        </nav>
+    </main>
+{% endblock %}
 
-    <nav class="nav-below">
-        {% if pageNumber !== 0 %}
-            <div class="nav-previous">
-                <a href="{{config.basic.root}}/page/{{pageNumber-1}}">上一页</a>
-            </div>
-        {% endif %}
-    
-        {% if (pageNumber+1) !== sumPages %}
-            <div class="nav-next">
-                <a href="{{config.basic.root}}/page/{{pageNumber+1}}">下一页</a>
-            </div>
-        {% endif %}
-    </nav>
-    第<span>{{pageNumber+1}}页</span>
-    共有<span>{{sumPages}}页</span>
+
+{% block secondary %}
+    {% parent %}
 {% endblock %}
