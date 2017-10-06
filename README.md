@@ -62,7 +62,7 @@ $ yohe page <pageName>
 the command will create `<pageName>.md` file in `source/_extra` dir, the initial layout of the new page is `about`.
 
 ## config.json
-```json
+```js
 {
     "basic": {
         "title": "My Blog", // the title of your blog
