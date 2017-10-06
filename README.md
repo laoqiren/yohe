@@ -67,32 +67,32 @@ the command will create `<pageName>.md` file in `source/_extra` dir, the initial
     "basic": {
         "title": "My Blog", // the title of your blog
         "author": "laoqiren", // the author of the blog
-        "description": "爱技术，爱生活",
+        "description": "I Love Coding",
         "root": "" // the root of the site ，e.g. set root to be "/yohe_site" if your blog is at "http://luoxia.me/yohe_site"
     },
     "theme": {
         "themeName": "default",  // name of the theme.
         "highlightTheme": "railscasts", // code highlight syle, all available styles refer to "https://github.com/isagalaev/highlight.js/tree/master/src/styles"
         "per_page": 6,// number of posts per page
-        "filter": ["life","随笔"],  // filter some special categories to not be shown
+        "filter": ["Life","Secret"],  // filter some special categories to not be shown
         "navPages": [     // custom pages
             {
-                "title": "标签",
+                "title": "Tags",
                 "url": "/tags"
             },
             {
-                "title": "关于",
+                "title": "About Me",
                 "url": "/about"
             },
             {
-                "title": "生活随笔",
+                "title": "Life",
                 "url": "/categories/life/"
             }
         ],
         "reward": {  // config about reward
             "enabled": true,
             "imgName": "alipay.jpg",  // reward QR Code images e.g. alipay.jpg
-            "words": "打赏"   // custom reward words
+            "words": "support me"   // custom reward words
         }
     },
     "server": {
