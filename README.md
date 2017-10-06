@@ -89,7 +89,11 @@ the command will create `<pageName>.md` file in `source/_extra` dir, the initial
                 "url": "/categories/life/"
             }
         ],
-        "reward": "alipay.jpg"    // reward QR Code images e.g. alipay.jpg
+        "reward": {  // config about reward
+            "enabled": true,
+            "imgName": "alipay.jpg",  // reward QR Code images e.g. alipay.jpg
+            "words": "打赏"   // custom reward words
+        }
     },
     "server": {
         "port": 3000 // the port of local static server

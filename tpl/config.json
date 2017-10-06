@@ -24,7 +24,11 @@
                 "url": "/categories/life/"
             }
         ],
-        "reward": "alipay.jpg"
+        "reward": {
+            "enabled": true,
+            "imgName": "alipay.jpg",
+            "words": "打赏"
+        }
     },
     "server": {
         "port": 3000

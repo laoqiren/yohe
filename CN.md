@@ -90,7 +90,11 @@ $ yohe page <pageName>
                 "url": "/categories/life/"
             }
         ],
-        "reward": "alipay.jpg"  // 打赏二维码图片名，如支付宝，微信支付等
+        "reward": {  // 打赏功能配置
+            "enabled": true,
+            "imgName": "alipay.jpg",  // 二维码图片名称
+            "words": "打赏"   // 打赏说明
+        }
     },
     "server": {
         "port": 3000 //本地预览服务器端口
