@@ -63,7 +63,7 @@ $ yohe page <pageName>
 
 ## 配置文件
 运行`yohe init`后会生成`config.json`,配置说明：
-```json
+```js
 {
     "basic": {
         "title": "My Blog", // 博客标题
