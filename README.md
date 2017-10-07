@@ -1,6 +1,7 @@
 # yohe
 [![npm](https://img.shields.io/npm/dm/yohe.svg?style=flat-square)](https://www.npmjs.com/package/yohe)
 [![npm](https://img.shields.io/npm/v/yohe.svg?style=flat-square)](https://github.com/laoqiren/yohe)
+[![npm](https://img.shields.io/npm/l/yohe.svg?style=flat-square)](https://github.com/laoqiren/yohe)
 
 a static blog generator, powered by [Node.js](https://nodejs.org). Yohe means that you will say "Wow, so cute" after you tried it.
 
