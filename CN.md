@@ -148,7 +148,8 @@ categories: Nodejs
 config | 配置对象，参考`config.json`
 tags | 标签数组，对每个标签项:`tag.name`,`tag.posts`(Array),`tag.url`
 categories  | 分类数组，对每个分类项目: `category.name`, `category.posts`,`category.url`
-archives | 归档数组，对每个归档项: `archive.name`,`archive.arrOfDate`,`archive.posts`,`archive.url`
+archives | 归档数组（主要包含每个归档的文章列表），对每个归档项: `archive.name`,`archive.posts`
+archivesList | 归档信息列表，对每个归档项: `archive.arrOfDate`,`archive.url`
 
 **特定变量:**
 

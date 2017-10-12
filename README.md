@@ -147,7 +147,8 @@ Variable  | Content
 config | configs Object, refer to `config.json`
 tags | Array of tags. For each: `tag.name`,`tag.posts`(Array),`tag.url`
 categories  | Array of categories. For each: `category.name`, `category.posts`,`category.url`
-archives | Array of archives. For each: `archive.name`,`archive.arrOfDate`,`archive.posts`,`archive.url`
+archives | Array of archives' posts(to show posts list of particular date). For each: `archive.name`,`archive.posts`
+archivesList | Array of archives' informations. For each: `archive.archiveTag`,`archive.arrOfDate`,`archive.url`
 
 **special variables:**
 

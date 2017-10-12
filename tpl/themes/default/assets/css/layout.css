@@ -135,6 +135,9 @@ a:hover {
     font-size: 1.3em;
 }
 
+.widget_archive {
+    margin-bottom: 4em;
+}
 .site-footer {
     color: #b3b3b1;
     text-align: center;
@@ -215,5 +218,8 @@ a:hover {
     }
     .site-title {
         font-size: 24px;
+    }
+    .widget_archive {
+        margin-bottom: 0;
     }
 }
