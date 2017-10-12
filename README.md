@@ -150,6 +150,7 @@ categories  | Array of categories. For each: `category.name`, `category.posts`,`
 archives | Array of archives. For each: `archive.name`,`archive.arrOfDate`,`archive.posts`,`archive.url`
 
 **special variables:**
+
 Page  | Variables
 ------------- | -------------
 post.html  | `post`: `post.title`, `post.date`, `post.categories`, `post.tags`,  `post.content`

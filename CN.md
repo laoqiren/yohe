@@ -151,6 +151,7 @@ categories  | 分类数组，对每个分类项目: `category.name`, `category.p
 archives | 归档数组，对每个归档项: `archive.name`,`archive.arrOfDate`,`archive.posts`,`archive.url`
 
 **特定变量:**
+
 页面 | 特定变量
 ------------- | -------------
 post.html  | `post`: `post.title`, `post.date`, `post.categories`, `post.tags`,  `post.content`
