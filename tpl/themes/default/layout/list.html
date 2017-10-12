@@ -23,22 +23,37 @@
     </header>
 
     <main id="content" class="site-content">
-            {% for post in list %}
-                <article>
-                    <header class="article-header">
-                        <h1><a href={{post.url}}>{{post.title}}</a></h1>
-                    </header>
-                    <p>
-                        {{post.headContent}}
-                    </p>
-                    <p>
-                        <a href={{post.url}}>阅读更多</a>
-                    </p>
-                    <footer class="article-footer">
-                        in {{post.categories}} | {{post.date}}
-                    </footer>
-                </article>
-            {% endfor %}
+        {% for post in posts %}
+            <article>
+                <header class="article-header">
+                    <h1><a href={{post.url}}>{{post.title}}</a></h1>
+                </header>
+                <p>
+                    {{post.headContent}}
+                </p>
+                <p>
+                    <a href={{post.url}}>阅读更多</a>
+                </p>
+                <footer class="article-footer">
+                    in {{post.categories}} | {{post.date}}
+                </footer>
+            </article>
+        {% endfor %}
+        <nav id="nav-below" class="site-navigation paging-navigation">
+            {% if pageNumber !== 0 %}
+                <div class="nav-previous">
+                    <a href="{{config.basic.root}}/{{flag}}/{{title}}/page/{{pageNumber-1}}">上一页</a>
+                </div>
+            {% endif %}
+        
+            {% if (pageNumber+1) !== sumPages %}
+                <div class="nav-next">
+                    <a href="{{config.basic.root}}/{{flag}}/{{title}}/page/{{pageNumber+1}}">下一页</a>
+                </div>
+            {% endif %}
+            第<span>{{pageNumber+1}}页</span>
+            共有<span>{{sumPages}}页</span>
+        </nav>
     </main>
     
 {% endblock %}
