@@ -129,7 +129,7 @@ categories: Nodejs
 
 ## How to develop themes
 
-**layouts:**
+### layouts:
 ```
 ├── about.html    // layout of about page(required)
 ├── index.html    // layout of index page(required)
@@ -139,7 +139,24 @@ categories: Nodejs
 └── ...           // custom layouts
 ```
 
-**assets:**
+### Variables:
+**basic variables:**
+
+Variable  | Content
+------------- | -------------
+config | configs Object, refer to `config.json`
+tags | Array of tags. For each: `tag.name`,`tag.posts`(Array),`tag.url`
+categories  | Array of categories. For each: `category.name`, `category.posts`,`category.url`
+archives | Array of archives. For each: `archive.name`,`archive.arrOfDate`,`archive.posts`,`archive.url`
+
+**special variables:**
+Page  | Variables
+------------- | -------------
+post.html  | `post`: `post.title`, `post.date`, `post.categories`, `post.tags`,  `post.content`
+list.html | `title`(the title of concrete tag or category or archive),`posts`(Array of posts after filtered),`pageNumber`(Number of page),`sumpages`(Sum of pages), `flag`("tags" or "categories" or archives")
+
+
+### assets:
 the static resources like `.js`,`.css` should be in dir `assets`
 
 ## Other tips

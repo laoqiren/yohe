@@ -1,9 +1,10 @@
 #! /usr/bin/env node
 
 const program = require('commander');
+const version = require('../package.json').version;
 
 program
-    .version('0.0.1')
+    .version(version)
     .command('init [dir]')
     .description('init a blog')
     .action(require('../lib/init'))

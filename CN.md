@@ -131,7 +131,7 @@ categories: Nodejs
 
 ## 如何开发主题
 
-**layouts:**
+### layouts:
 ```
 ├── about.html    // 关于页面布局（必须）
 ├── index.html    // 首页布局（必须）
@@ -140,8 +140,22 @@ categories: Nodejs
 └── tags.html     // 标签云布局（必须）
 └── ...           // 自定义的布局
 ```
+### 暴露的模板变量:
+**基本变量:**
 
-**assets:**
+变量名  | 内容
+------------- | -------------
+config | 配置对象，参考`config.json`
+tags | 标签数组，对每个标签项:`tag.name`,`tag.posts`(Array),`tag.url`
+categories  | 分类数组，对每个分类项目: `category.name`, `category.posts`,`category.url`
+archives | 归档数组，对每个归档项: `archive.name`,`archive.arrOfDate`,`archive.posts`,`archive.url`
+
+**特定变量:**
+页面 | 特定变量
+------------- | -------------
+post.html  | `post`: `post.title`, `post.date`, `post.categories`, `post.tags`,  `post.content`
+list.html | `title`(具体分类名，标签名，归档日期),`posts`(过滤后的文章数组),`pageNumber`(分页数),`sumpages`(总页数), `flag`("tags" or "categories" or archives"其中一个)
+### assets:
 静态资源文件放在`assets`目录下
 
 
