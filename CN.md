@@ -157,6 +157,7 @@ archivesList | 归档信息列表，对每个归档项: `archive.arrOfDate`,`arc
 ------------- | -------------
 post.html  | `post`: `post.title`, `post.date`, `post.categories`, `post.tags`,  `post.content`
 list.html | `title`(具体分类名，标签名，归档日期),`posts`(过滤后的文章数组),`pageNumber`(分页数),`sumpages`(总页数), `flag`("tags" or "categories" or archives"其中一个)
+about.html | `content`: `about.md`或者其他自定义页面的`.md`文件内容
 ### assets:
 静态资源文件放在`assets`目录下
 
@@ -171,7 +172,6 @@ list.html | `title`(具体分类名，标签名，归档日期),`posts`(过滤�
 
 
 * 默认主题完善
-* archives
 * 统计等功能
 * 更丰富的配置
 
