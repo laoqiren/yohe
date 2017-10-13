@@ -156,6 +156,7 @@ Page  | Variables
 ------------- | -------------
 post.html  | `post`: `post.title`, `post.date`, `post.categories`, `post.tags`,  `post.content`
 list.html | `title`(the title of concrete tag or category or archive),`posts`(Array of posts after filtered),`pageNumber`(Number of page),`sumpages`(Sum of pages), `flag`("tags" or "categories" or archives")
+about.html | `content`: the content of `about.md` or other extra pages' `.md` file.
 
 
 ### assets:
@@ -169,7 +170,7 @@ the static resources like `.js`,`.css` should be in dir `assets`
 ## TODOs
 
 * beautify default theme
-* archives,analysis,etc
+* analysis,etc
 * complex config
 
 ## LICENSE
