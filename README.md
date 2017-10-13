@@ -1,4 +1,6 @@
-# yohe
+# Yohe
+<img src="./logo.png" width = "200" alt="logo" align=center />
+
 [![npm](https://img.shields.io/npm/dm/yohe.svg?style=flat-square)](https://www.npmjs.com/package/yohe)
 [![npm](https://img.shields.io/npm/v/yohe.svg?style=flat-square)](https://github.com/laoqiren/yohe)
 [![npm](https://img.shields.io/npm/l/yohe.svg?style=flat-square)](https://github.com/laoqiren/yohe)
